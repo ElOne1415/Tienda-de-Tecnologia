@@ -8,12 +8,36 @@
 
 <style>
 
+/* ========================= */
+/* ====== FUENTES ========= */
+/* ========================= */
+
+@font-face{
+   font-family: fuente_titulo;
+   src: url('titulo.eot');
+   src: url('titulo.eot?#iefix') format('embedded-opentype'),
+        url('titulo.ttf') format('truetype');
+}
+
+@font-face{
+   font-family: fuente_texto;
+   src: url('texto.eot');
+   src: url('texto.eot?#iefix') format('embedded-opentype'),
+        url('texto.otf') format('opentype');
+}
+
 /* ====== LO ORIGINAL (NO MODIFICADO) ====== */
 body {
 font-family: Arial, sans-serif;
 margin: 0;
 padding: 0;
 background-color: #f5f7fa;
+
+/* Imagen fija de fondo */
+background:url('fondo.jpg');
+background-attachment:fixed;
+background-size:cover;
+
 color: #333;
 }
 
@@ -23,9 +47,18 @@ font-size: 28px;
 padding: 20px 10px 10px;
 color: #0a74da;
 font-weight: bold;
+
+/* Fuente personalizada */
+font-family: fuente_titulo;
+
+/* Sombra de texto */
+text-shadow: 4px 4px 6px gray;
+
+/* Halo */
+box-shadow: 0px 0px 30px blue;
 }
 
-/* ====== AÑADIDO: línea horizontal decorativa ====== */
+/* Línea horizontal */
 hr {
 border: none;
 border-top: 4px dotted #0a74da;
@@ -33,7 +66,6 @@ width: 60%;
 margin: 20px auto;
 }
 
-/* ====== AÑADIDO: borde inferior al header ====== */
 header {
 border-bottom: 4px solid #0a74da;
 box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
@@ -45,15 +77,14 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin-bottom: 20px;
+
+/* Sombra fuerte */
+box-shadow: 6px 20px 10px black;
 }
 
 .logo-container img {
 height: 120px;
 transition: transform 0.3s ease;
-}
-
-/* ====== AÑADIDO: borde y sombra al logo ====== */
-.logo-container img {
 border: 3px solid #0a74da;
 border-radius: 20px;
 box-shadow: 0px 0px 15px rgba(10,116,218,0.4);
@@ -63,34 +94,30 @@ box-shadow: 0px 0px 15px rgba(10,116,218,0.4);
 transform: scale(1.05);
 }
 
-/* Nav estilizado */
+/* Nav */
 nav {
 text-align: center;
 font-size: 18px;
 margin-bottom: 20px;
-background-color: #0a74da;
+background-color: rgba(10,116,218,0.9);
 padding: 12px 0;
 border-radius: 6px;
-box-shadow: 0 2px 5px rgba(10, 116, 218, 0.4);
+box-shadow: 7px 9px 15px black inset;
 }
 
-/* ====== AÑADIDO: líneas verticales ====== */
 nav a {
 border-right: 2px solid white;
 padding: 0 15px;
-}
-
-nav a:last-child {
-border-right: none;
-}
-
-nav a {
 color: white;
 margin: 0 12px;
 text-decoration: none;
 font-weight: 600;
 transition: color 0.3s ease;
 cursor: pointer;
+}
+
+nav a:last-child {
+border-right: none;
 }
 
 nav a:hover {
@@ -103,21 +130,20 @@ max-width: 700px;
 margin: 0 auto;
 }
 
+/* Artículos */
 article {
 font-size: 16px;
 line-height: 1.6;
 margin-bottom: 18px;
 padding: 12px;
-background-color: white;
-border-radius: 8px;
-box-shadow: 0 0 8px rgb(10 116 218 / 0.15);
-transition: box-shadow 0.3s ease;
-}
-
-/* ====== AÑADIDO: borde más visible y sombra fuerte ====== */
-article {
-border: 2px solid #e3d193;
+background-color: rgba(255,255,255,0.9);
 border-radius: 20px;
+
+/* Múltiples sombras */
+box-shadow: 0px 0px 20px red inset,
+            0px 0px 25px blue;
+
+font-family: fuente_texto;
 }
 
 article:hover {
@@ -127,23 +153,19 @@ cursor: default;
 
 strong {
 color: #0a74da;
+text-shadow: 2px 2px 4px gray;
 }
 
 ol {
 background: white;
 padding: 15px 30px;
-border-radius: 8px;
-box-shadow: 0 0 8px rgb(10 116 218 / 0.15);
+border-radius: 20px;
+border: 2px solid #0a74da;
+
+/* Halo */
+box-shadow: 0px 0px 30px blue;
 max-width: 700px;
 margin: 10px auto 25px;
-}
-
-/* ====== AÑADIDO: borde y sombra múltiple ====== */
-ol {
-border: 2px solid #0a74da;
-border-radius: 20px;
-box-shadow: 0px 0px 10px rgba(10,116,218,0.3) inset,
-            0px 0px 15px rgba(10,116,218,0.3);
 }
 
 ol li {
@@ -158,11 +180,25 @@ margin-top: 30px;
 font-size: 14px;
 color: #777;
 padding-bottom: 30px;
+border-top: 4px solid #0a74da;
+
+/* Sombra externa */
+box-shadow: 6px 20px 1px black;
 }
 
-/* ====== AÑADIDO: línea superior en footer ====== */
-footer {
-border-top: 4px solid #0a74da;
+/* ===== SECCIÓN DEMOSTRACIÓN ===== */
+
+#apartado1{
+   font-family: fuente_titulo;
+   font-size: 38px;
+   color:white;
+   background-color:#E3D193;
+   text-shadow: 10px 10px 5px gray;
+   box-shadow: 0px 0px 20px red inset,
+               0px 0px 25px blue;
+   padding:20px;
+   margin:20px;
+   text-align:center;
 }
 
 </style>
@@ -176,7 +212,6 @@ border-top: 4px solid #0a74da;
 Tienda de Tecnología
 </header>
 
-<!-- AÑADIDO: línea horizontal -->
 <hr>
 
 <div class="logo-container">
@@ -190,6 +225,11 @@ Tienda de Tecnología
 </nav>
 
 <main>
+
+<div id="apartado1">
+Las palabras mágicas
+</div>
+
 <h2 id="inicio">¿Quiénes somos?</h2>
 <article>
 <strong>¿Quiénes somos?</strong><br />
@@ -200,9 +240,8 @@ calidad garantizada y los mejores precios del mercado.
 
 <h2 id="catalogo">Catálogo de Productos</h2>
 <ol>
-<li><a href="https://www.samsung.com/co/smartphones/galaxy-s/galaxy-s23-cream-256gb-sm-s911bzekltc/" target="_blank" rel="noopener noreferrer">Samsung Galaxy S23</a> Pantalla AMOLED, 128GB de almacenamiento, alto rendimiento y diseño moderno.</li>
-
-<li><a href="https://mac-center.com/collections/iphone-15-pro" target="_blank" rel="noopener noreferrer">Iphone 15 Pro Max</a> Cámara avanzada, 256GB de almacenamiento y máxima seguridad iOS.</li>
+<li><a href="https://www.samsung.com/co/smartphones/galaxy-s/galaxy-s23-cream-256gb-sm-s911bzekltc/" target="_blank">Samsung Galaxy S23</a></li>
+<li><a href="https://mac-center.com/collections/iphone-15-pro" target="_blank">Iphone 15 Pro Max</a></li>
 </ol>
 
 <article>
