@@ -54,8 +54,10 @@ Contiene recursos estáticos:
 
 ---
 
-### Opción 2 — Ejecutar con servidor local 
-Python instalado:
+### Opción 2 — Ejecutar directamente desde GitHub
 
-cd Tienda_Tecnologia
-python -m http.server 5500
+1. Accedemos al repositorio creado en GitHub (Tienda-de-Tecnologia)
+2. Accedemos al apartado de configuraciones del repositorio.
+3. Visualizamos el apartado de pages en configuraciones.
+4. Dar clic en el enlace disponible y accederemos al proyecto de forma automatica.
+(https://elone1415.github.io/Tienda-de-Tecnologia/)
